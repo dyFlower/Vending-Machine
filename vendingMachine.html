@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Vending-Machine</title>
+        <link rel="stylesheet" href="./css/reset.css" />
+        <link rel="stylesheet" href="./css/style.css" />
+    </head>
+    <body>
+        <header>
+            <h1 class="h1-logo"><img class="title-logo" src="./img/logo.png" alt="" /></h1>
+        </header>
+        <main>
+            <div class="wrapper-section">
+                <section class="left-section">
+                    <h2 class="blind">buying drink</h2>
+                    <ul class="list-drink">
+                        <li class="sell">
+                            <button class="btn-drink">
+                                <figure class="img-drink">
+                                    <img src="./img/Original_Cola.png" alt="" />
+                                    <figcaption class="name-drink">Original_Cola</figcaption>
+                                </figure>
+                                <p class="txt-drink-price">1000원</p>
+                            </button>
+                        </li>
+                        <li class="sell">
+                            <button class="btn-drink">
+                                <figure class="img-drink">
+                                    <img src="./img/Violet_Cola.png" alt="" />
+                                    <figcaption class="name-drink">Violet_Cola</figcaption>
+                                </figure>
+                                <p class="txt-drink-price">1000원</p>
+                            </button>
+                        </li>
+                        <li class="sell">
+                            <button class="btn-drink">
+                                <figure class="img-drink">
+                                    <img src="./img/Yellow_Cola.png" alt="" />
+                                    <figcaption class="name-drink">Yellow_Cola</figcaption>
+                                </figure>
+                                <p class="txt-drink-price">1000원</p>
+                            </button>
+                        </li>
+                        <li class="sell">
+                            <button class="btn-drink">
+                                <figure class="img-drink">
+                                    <img src="./img/Cool_Cola.png" alt="" />
+                                    <figcaption class="name-drink">Cool_Cola</figcaption>
+                                </figure>
+                                <p class="txt-drink-price">1000원</p>
+                            </button>
+                        </li>
+                        <li class="sell">
+                            <button class="btn-drink">
+                                <figure class="img-drink">
+                                    <img src="./img/Green_Cola.png" alt="" />
+                                    <figcaption class="name-drink">Green_Cola</figcaption>
+                                </figure>
+                                <p class="txt-drink-price">1000원</p>
+                            </button>
+                        </li>
+                        <li class="sell">
+                            <button class="btn-drink">
+                                <figure class="img-drink">
+                                    <img src="./img/Orange_Cola.png" alt="" />
+                                    <figcaption class="name-drink">Orange_Cola</figcaption>
+                                </figure>
+                                <p class="txt-drink-price">1000원</p>
+                            </button>
+                        </li>
+                    </ul>
+                    <section class="section-charging">
+                        <div class="return-money"><span class="balance">1,000</span></div>
+                        <button class="btn-return">거스름돈 반환</button>
+                        <input class="input-money" type="text" placeholder="입금액 입력" />
+                        <button class="btn-input">입금</button>
+                        <div class="box-cart">
+                            <figure class="img-drink">
+                                <img src="./img/Original_Cola.png" alt="" />
+                                <figcaption class="name-drink">Original_Cola</figcaption>
+                                <div class="number-drink"><span>1</span></div>
+                            </figure>
+                            <figure class="img-drink">
+                                <img src="./img/Green_Cola.png" alt="" />
+                                <figcaption class="name-drink">Green_Cola</figcaption>
+                                <div class="number-drink"><span>2</span></div>
+                            </figure>
+                        </div>
+                        <button class="btn-get">획득</button>
+                    </section>
+                </section>
+                <section class="right-section">
+                    <div class="pocket">
+                        <h2 class="blind">내가 소유중인 것</h2>
+
+                        <div class="my_money"><span id="my-money-value">25,000 </span>원</div>
+                    </div>
+
+                    <div class="drink_mine">
+                        <h3>획득한 음료</h3>
+                        <ul class="list-get-drink">
+                            <li>
+                                <figure class="img-drink">
+                                    <img src="./img/Original_Cola.png" alt="" />
+                                    <figcaption class="name-drink">Original_Cola</figcaption>
+                                    <div class="number-drink"><span>1</span></div>
+                                </figure>
+                            </li>
+                            <li>
+                                <figure class="img-drink">
+                                    <img src="./img/Green_Cola.png" alt="" />
+                                    <figcaption class="name-drink">Green_Cola</figcaption>
+                                    <div class="number-drink"><span>2</span></div>
+                                </figure>
+                            </li>
+                            <li>
+                                <figure class="img-drink">
+                                    <img src="./img/Orange_Cola.png" alt="" />
+                                    <figcaption class="name-drink">Orange_Cola</figcaption>
+                                    <div class="number-drink"><span>1</span></div>
+                                </figure>
+                            </li>
+                            <li>
+                                <figure class="img-drink">
+                                    <img src="./img/Violet_Cola.png" alt="" />
+                                    <figcaption class="name-drink">Violet_Cola</figcaption>
+                                    <div class="number-drink"><span>5</span></div>
+                                </figure>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="total_price">총금액: <span id="total-price">9,000</span> 원</div>
+                </section>
+            </div>
+        </main>
+    </body>
+</html>

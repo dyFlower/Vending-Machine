@@ -1,0 +1,284 @@
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 400;
+    src: url('https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff2') format('woff2'), url('https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff') format('woff'),
+        url('https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.otf') format('opentype');
+}
+
+.h1-logo {
+    text-align: center;
+}
+
+.wrapper-section {
+    display: flex;
+    justify-content: center;
+    gap: 28px;
+}
+
+.blind {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+}
+
+button {
+    background: inherit;
+    border: none;
+    border-radius: 5px;
+    padding: 0;
+    overflow: visible;
+    cursor: pointer;
+    box-shadow: 0 0 5px gray;
+}
+
+input {
+    background: inherit;
+    border: none;
+    border-radius: 5px;
+    padding: 0;
+    overflow: visible;
+}
+
+body {
+    background-color: #eae8fe;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: 'Noto Sans KR';
+}
+
+.h1-logo {
+    margin-bottom: 40px;
+}
+
+/* ---------------- left-section ---------------- */
+.left-section {
+    background-color: white;
+    width: 360px;
+    height: 545px;
+    box-sizing: border-box;
+    padding: 31px 27px 28px;
+}
+/******************* list-drink section ********************/
+.list-drink {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    gap: 9px;
+}
+.btn-drink {
+    width: 94px;
+    height: 130px;
+    border-radius: 10px;
+    padding: 11px 11px 9px 13px;
+    font-size: 9px;
+}
+.btn-drink:hover {
+    border: 3px solid #6327fe;
+}
+.name-drink {
+    margin: 5px 0;
+}
+.btn-drink .txt-drink-price {
+    font-size: 12px;
+    border-radius: 50px;
+    background-color: #6327fe;
+    color: white;
+    line-height: 22px;
+}
+/******************* charging section ********************/
+.section-charging {
+    margin-top: 20px;
+    height: 40%;
+    display: grid;
+    grid-template-rows: 1fr 1fr 3fr;
+    grid-template-columns: 2fr 1fr;
+    gap: 12px;
+    position: relative;
+}
+.return-money::before {
+    content: '잔액 : ';
+    position: absolute;
+    color: black;
+    top: 8px;
+    right: 265px;
+}
+.balance {
+    position: absolute;
+    top: 8px;
+    right: 140px;
+}
+.return-money::after {
+    content: '원';
+    position: absolute;
+    color: black;
+    top: 8px;
+    left: 170px;
+}
+.return-money {
+    display: inline-block;
+    background-color: #eae8fe;
+    text-align: right;
+    border-radius: 5px;
+}
+.return-money::placeholder {
+    color: black;
+    padding-left: 10px;
+    text-align: left;
+}
+
+.input-money {
+    border: 1px solid #bdbdbd;
+    padding-left: 5px;
+}
+
+.btn-get {
+    background-color: #6327fe;
+    color: white;
+}
+.box-cart {
+    background-color: #eae8fe;
+    overflow-y: scroll;
+    padding: 12px;
+    padding-right: 4px;
+    font-size: 9px;
+    border: 1px solid #bdbdbd;
+    border-radius: 5px;
+}
+
+.box-cart .img-drink {
+    background-color: white;
+    padding: 6px 10px;
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+}
+.box-cart img {
+    width: 18px;
+    margin-right: 8px;
+}
+
+/* *************돌려쓰는 number박스*************/
+.number-drink {
+    border: 1px solid #bdbdbd;
+    border-radius: 5px;
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 14px;
+    margin-left: auto;
+}
+
+/* ======================= 스크롤 바 ========================*/
+
+.box-cart::-webkit-scrollbar {
+    width: 12px; /* 스크롤바의 너비 */
+}
+
+.box-cart::-webkit-scrollbar-thumb {
+    height: 75%; /* 스크롤바의 길이 */
+    background: white; /* 스크롤바의 색상 */
+    background-clip: padding-box;
+    border: 4px solid #eae8fe;
+    border-radius: 50px;
+}
+
+.box-cart::-webkit-scrollbar-track {
+    background: #eae8fe; /*스크롤바 뒷 배경 색상*/
+    border-radius: 50px;
+}
+
+/* ---------------- right-section ---------------- */
+.right-section {
+    width: 360px;
+    height: 545px;
+}
+.pocket {
+    border: 1px solid transparent;
+    background-color: white;
+    margin-bottom: 20px;
+    position: relative;
+}
+.my_money::before {
+    content: '소지금 :';
+    position: absolute;
+    right: 270px;
+}
+.my_money {
+    text-align: right;
+    margin: 9px 27px;
+    padding: 0 10px;
+    background-color: #eae8fe;
+    line-height: 32px;
+    border-radius: 5px;
+}
+
+.drink_mine {
+    display: block;
+    text-align: center;
+    border: 1px solid transparent;
+    background-color: white;
+}
+h3 {
+    margin-top: 25px;
+    margin-bottom: 14px;
+    font-weight: 700;
+}
+.list-get-drink {
+    margin: 0 27px;
+    height: 340px;
+    background-color: #eae8fe;
+    border-radius: 5px;
+    overflow-y: scroll;
+    padding-left: 12px;
+    padding-top: 12px;
+    font-size: 9px;
+    border-radius: 5px;
+    border: 1px solid #bdbdbd;
+}
+
+.drink_mine .img-drink {
+    background-color: white;
+    padding: 6px 10px;
+    margin-bottom: 6px;
+    margin-right: 8px;
+    display: flex;
+    align-items: center;
+}
+.list-get-drink img {
+    width: 18px;
+    margin-right: 10px;
+}
+
+.total_price {
+    background-color: white;
+    text-align: right;
+    line-height: 40px;
+    height: 65px;
+    padding-right: 27px;
+}
+.list-get-drink .name-drink {
+}
+
+/* ======================= 스크롤 바 ========================*/
+
+.list-get-drink::-webkit-scrollbar {
+    width: 12px; /* 스크롤바의 너비 */
+}
+
+.list-get-drink::-webkit-scrollbar-thumb {
+    height: 10%; /* 스크롤바의 길이 */
+    background: white; /* 스크롤바의 색상 */
+    background-clip: padding-box;
+    border: 4px solid #eae8fe;
+    border-radius: 50px;
+}
+
+.list-get-drink::-webkit-scrollbar-track {
+    background: #eae8fe; /*스크롤바 뒷 배경 색상*/
+    border-radius: 50px;
+}
