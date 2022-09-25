@@ -96,18 +96,23 @@ body {
     color: white;
     line-height: 22px;
 }
-.sell .sold-out {
+
+.sell {
+    position: relative;
+}
+.sold-out::after {
+    content: '품절';
+    color: transparent;
     position: absolute;
+    width: 100%;
+    height: 100%;
+    right: 0;
+    border-radius: 10px;
+    opacity: 80%;
     background-color: black;
     background-image: url(../img/sold_out.png);
     background-repeat: no-repeat;
     background-position: center;
-    border-radius: 10px;
-    opacity: 80%;
-    width: 94px;
-    height: 130px;
-    top: -3px;
-    left: -3px;
 }
 
 /******************* charging section ********************/
