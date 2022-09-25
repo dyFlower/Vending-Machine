@@ -11,6 +11,11 @@
 }
 
 .wrapper-section {
+    /* display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    gap: 28px; */
+
     display: flex;
     justify-content: center;
     gap: 28px;
@@ -75,9 +80,11 @@ body {
     border-radius: 10px;
     padding: 11px 11px 9px 13px;
     font-size: 9px;
+    border: 3px solid transparent;
+    position: relative;
 }
 .btn-drink:hover {
-    border: 3px solid #6327fe;
+    outline: 3px solid #6327fe;
 }
 .name-drink {
     margin: 5px 0;
@@ -89,6 +96,20 @@ body {
     color: white;
     line-height: 22px;
 }
+.sell .sold-out {
+    position: absolute;
+    background-color: black;
+    background-image: url(../img/sold_out.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 10px;
+    opacity: 80%;
+    width: 94px;
+    height: 130px;
+    top: -3px;
+    left: -3px;
+}
+
 /******************* charging section ********************/
 .section-charging {
     margin-top: 20px;
@@ -97,37 +118,25 @@ body {
     grid-template-rows: 1fr 1fr 3fr;
     grid-template-columns: 2fr 1fr;
     gap: 12px;
-    position: relative;
 }
-.return-money::before {
-    content: '잔액 : ';
-    position: absolute;
-    color: black;
-    top: 8px;
-    right: 265px;
+/**************** 잔 액 박 스 *******************/
+.return-money {
+    background-color: #eae8fe;
+    text-align: left;
+    line-height: 33px;
+    border-radius: 5px;
+    padding-left: 10px;
+    position: relative;
 }
 .balance {
     position: absolute;
-    top: 8px;
-    right: 140px;
+    right: 30px;
 }
-.return-money::after {
+.balance::after {
     content: '원';
     position: absolute;
     color: black;
-    top: 8px;
-    left: 170px;
-}
-.return-money {
-    display: inline-block;
-    background-color: #eae8fe;
-    text-align: right;
-    border-radius: 5px;
-}
-.return-money::placeholder {
-    color: black;
-    padding-left: 10px;
-    text-align: left;
+    left: 40px;
 }
 
 .input-money {
@@ -203,18 +212,24 @@ body {
     margin-bottom: 20px;
     position: relative;
 }
-.my_money::before {
-    content: '소지금 :';
-    position: absolute;
-    right: 270px;
-}
+
 .my_money {
-    text-align: right;
     margin: 9px 27px;
     padding: 0 10px;
     background-color: #eae8fe;
     line-height: 32px;
     border-radius: 5px;
+    text-align: left;
+}
+#my-money-value {
+    position: absolute;
+    right: 60px;
+}
+#my-money-value::after {
+    content: ' 원';
+    position: absolute;
+    color: black;
+    margin-left: 5px;
 }
 
 .drink_mine {
@@ -261,9 +276,6 @@ h3 {
     height: 65px;
     padding-right: 27px;
 }
-.list-get-drink .name-drink {
-}
-
 /* ======================= 스크롤 바 ========================*/
 
 .list-get-drink::-webkit-scrollbar {
@@ -282,3 +294,29 @@ h3 {
     background: #eae8fe; /*스크롤바 뒷 배경 색상*/
     border-radius: 50px;
 }
+
+@media (max-width: 500px) {
+    .h1-logo img {
+        width: 80%;
+    }
+
+    .wrapper-section {
+        flex-direction: column;
+        gap: 0;
+    }
+    .right-section,
+    .left-section {
+        width: 100vw;
+    }
+    .left-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pocket {
+        margin-bottom: 0;
+    }
+}
+
+/* 라벨을 설정하면 버튼인 부분 말고 라벨로 감싼 부분을 눌러도 선택이 된다...ㄴ */

@@ -7,6 +7,7 @@
         <title>Vending-Machine</title>
         <link rel="stylesheet" href="./css/reset.css" />
         <link rel="stylesheet" href="./css/style.css" />
+        <link rel="stylesheet" href="" />
     </head>
     <body>
         <header>
@@ -24,15 +25,17 @@
                                     <figcaption class="name-drink">Original_Cola</figcaption>
                                 </figure>
                                 <p class="txt-drink-price">1000원</p>
+                                <!-- <div class="sold-out"></div> -->
                             </button>
                         </li>
-                        <li class="sell">
+                        <li class="sell sold-out">
                             <button class="btn-drink">
                                 <figure class="img-drink">
                                     <img src="./img/Violet_Cola.png" alt="" />
                                     <figcaption class="name-drink">Violet_Cola</figcaption>
                                 </figure>
                                 <p class="txt-drink-price">1000원</p>
+                                <div class="sold-out"></div>
                             </button>
                         </li>
                         <li class="sell">
@@ -42,6 +45,7 @@
                                     <figcaption class="name-drink">Yellow_Cola</figcaption>
                                 </figure>
                                 <p class="txt-drink-price">1000원</p>
+                                <!-- <div class="sold-out"></div> -->
                             </button>
                         </li>
                         <li class="sell">
@@ -51,6 +55,7 @@
                                     <figcaption class="name-drink">Cool_Cola</figcaption>
                                 </figure>
                                 <p class="txt-drink-price">1000원</p>
+                                <!-- <div class="sold-out"></div> -->
                             </button>
                         </li>
                         <li class="sell">
@@ -60,6 +65,7 @@
                                     <figcaption class="name-drink">Green_Cola</figcaption>
                                 </figure>
                                 <p class="txt-drink-price">1000원</p>
+                                <!-- <div class="sold-out"></div> -->
                             </button>
                         </li>
                         <li class="sell">
@@ -69,11 +75,13 @@
                                     <figcaption class="name-drink">Orange_Cola</figcaption>
                                 </figure>
                                 <p class="txt-drink-price">1000원</p>
+                                <!-- <div class="sold-out"></div> -->
                             </button>
                         </li>
                     </ul>
                     <section class="section-charging">
-                        <div class="return-money"><span class="balance">1,000</span></div>
+                        <h2 class="blind"></h2>
+                        <div class="return-money">잔액 :<span class="balance">1,000</span></div>
                         <button class="btn-return">거스름돈 반환</button>
                         <input class="input-money" type="text" placeholder="입금액 입력" />
                         <button class="btn-input">입금</button>
@@ -96,7 +104,7 @@
                     <div class="pocket">
                         <h2 class="blind">내가 소유중인 것</h2>
 
-                        <div class="my_money"><span id="my-money-value">25,000 </span>원</div>
+                        <div class="my_money">소지금 : <span id="my-money-value">25,000 </span></div>
                     </div>
 
                     <div class="drink_mine">
@@ -136,5 +144,7 @@
                 </section>
             </div>
         </main>
+
+        <script src="./js/test.js"></script>
     </body>
 </html>
