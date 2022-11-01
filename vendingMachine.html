@@ -7,7 +7,6 @@
         <title>Vending-Machine</title>
         <link rel="stylesheet" href="./css/reset.css" />
         <link rel="stylesheet" href="./css/style.css" />
-        <link rel="stylesheet" href="" />
     </head>
     <body>
         <header>
@@ -19,78 +18,61 @@
                     <h2 class="blind">buying drink</h2>
                     <ul class="list-drink">
                         <li class="sell">
-                            <button class="btn-drink">
-                                <figure class="img-drink">
-                                    <img src="./img/Original_Cola.png" alt="" />
-                                    <figcaption class="name-drink">Original_Cola</figcaption>
-                                </figure>
-                                <p class="txt-drink-price">1000원</p>
-                            </button>
-                        </li>
-                        <li class="sell sold-out">
-                            <button class="btn-drink">
-                                <figure class="img-drink">
-                                    <img src="./img/Violet_Cola.png" alt="" />
-                                    <figcaption class="name-drink">Violet_Cola</figcaption>
-                                </figure>
-                                <p class="txt-drink-price">1000원</p>
+                            <button class="btn-drink Original">
+                                <img class="img-drink" src="./img/Original_Cola.png" alt="" />
+                                <span class="name-drink">Original_Cola</span>
+                                <span class="txt-drink-price">1000원</span>
                             </button>
                         </li>
                         <li class="sell">
-                            <button class="btn-drink">
-                                <figure class="img-drink">
-                                    <img src="./img/Yellow_Cola.png" alt="" />
-                                    <figcaption class="name-drink">Yellow_Cola</figcaption>
-                                </figure>
-                                <p class="txt-drink-price">1000원</p>
+                            <button class="btn-drink Violet sold-out">
+                                <img class="img-drink" src="./img/Violet_Cola.png" alt="" />
+                                <span class="name-drink">Violet_Cola</span>
+                                <span class="txt-drink-price">1000원</span>
                             </button>
                         </li>
                         <li class="sell">
-                            <button class="btn-drink">
-                                <figure class="img-drink">
-                                    <img src="./img/Cool_Cola.png" alt="" />
-                                    <figcaption class="name-drink">Cool_Cola</figcaption>
-                                </figure>
-                                <p class="txt-drink-price">1000원</p>
+                            <button class="btn-drink Yellow">
+                                <img class="img-drink" src="./img/Yellow_Cola.png" alt="" />
+                                <span class="name-drink">Yellow_Cola</span>
+                                <span class="txt-drink-price">1000원</span>
                             </button>
                         </li>
                         <li class="sell">
-                            <button class="btn-drink">
-                                <figure class="img-drink">
-                                    <img src="./img/Green_Cola.png" alt="" />
-                                    <figcaption class="name-drink">Green_Cola</figcaption>
-                                </figure>
-                                <p class="txt-drink-price">1000원</p>
+                            <button class="btn-drink Cool">
+                                <img class="img-drink" src="./img/Cool_Cola.png" alt="" />
+                                <span class="name-drink">Cool_Cola</span>
+                                <span class="txt-drink-price">1000원</span>
                             </button>
                         </li>
                         <li class="sell">
-                            <button class="btn-drink">
-                                <figure class="img-drink">
-                                    <img src="./img/Orange_Cola.png" alt="" />
-                                    <figcaption class="name-drink">Orange_Cola</figcaption>
-                                </figure>
-                                <p class="txt-drink-price">1000원</p>
+                            <button class="btn-drink Green">
+                                <img class="img-drink" src="./img/Green_Cola.png" alt="" />
+                                <span class="name-drink">Green_Cola</span>
+                                <span class="txt-drink-price">1000원</span>
+                            </button>
+                        </li>
+                        <li class="sell">
+                            <button class="btn-drink Orange">
+                                <img class="img-drink" src="./img/Orange_Cola.png" alt="" />
+                                <span class="name-drink">Orange_Cola</span>
+                                <span class="txt-drink-price">1000원</span>
                             </button>
                         </li>
                     </ul>
                     <section class="section-charging">
-                        <h2 class="blind"></h2>
-                        <div class="return-money">잔액 :<span class="balance">1,000</span></div>
+                        <h2 class="blind">거래창</h2>
+                        <div class="return-money">잔액 :<span class="balance">0</span></div>
                         <button class="btn-return">거스름돈 반환</button>
                         <input class="input-money" type="text" placeholder="입금액 입력" />
                         <button class="btn-input">입금</button>
-                        <div class="box-cart">
-                            <figure class="img-drink">
+                        <ul class="box-cart">
+                            <!-- <li class="img-drink Original_Cola">
                                 <img src="./img/Original_Cola.png" alt="" />
-                                <figcaption class="name-drink">Original_Cola</figcaption>
-                                <div class="number-drink"><span>1</span></div>
-                            </figure>
-                            <figure class="img-drink">
-                                <img src="./img/Green_Cola.png" alt="" />
-                                <figcaption class="name-drink">Green_Cola</figcaption>
-                                <div class="number-drink"><span>2</span></div>
-                            </figure>
-                        </div>
+                                <p class="name-drink">Original_Cola</p>
+                                <div class="number-drink">1</div>
+                            </li> -->
+                        </ul>
                         <button class="btn-get">획득</button>
                     </section>
                 </section>
@@ -98,47 +80,47 @@
                     <div class="pocket">
                         <h2 class="blind">내가 소유중인 것</h2>
 
-                        <div class="my_money">소지금 : <span id="my-money-value">25,000 </span></div>
+                        <div class="my_money">소지금 : <span id="my-money-value">25000</span></div>
                     </div>
 
                     <div class="drink_mine">
                         <h3>획득한 음료</h3>
                         <ul class="list-get-drink">
-                            <li>
-                                <figure class="img-drink">
+                            <!-- <li>
+                                <div class="img-drink">
                                     <img src="./img/Original_Cola.png" alt="" />
-                                    <figcaption class="name-drink">Original_Cola</figcaption>
-                                    <div class="number-drink"><span>1</span></div>
-                                </figure>
+                                    <p class="name-drink">Original_Cola</p>
+                                    <div class="number-drink">1</div>
+                                </div>
                             </li>
                             <li>
-                                <figure class="img-drink">
+                                <div class="img-drink">
                                     <img src="./img/Green_Cola.png" alt="" />
-                                    <figcaption class="name-drink">Green_Cola</figcaption>
-                                    <div class="number-drink"><span>2</span></div>
-                                </figure>
+                                    <p class="name-drink">Green_Cola</p>
+                                    <div class="number-drink">2</div>
+                                </div>
                             </li>
                             <li>
-                                <figure class="img-drink">
+                                <div class="img-drink">
                                     <img src="./img/Orange_Cola.png" alt="" />
-                                    <figcaption class="name-drink">Orange_Cola</figcaption>
-                                    <div class="number-drink"><span>1</span></div>
-                                </figure>
+                                    <p class="name-drink">Orange_Cola</p>
+                                    <div class="number-drink">1</div>
+                                </div>
                             </li>
-                            <li>
-                                <figure class="img-drink">
-                                    <img src="./img/Violet_Cola.png" alt="" />
-                                    <figcaption class="name-drink">Violet_Cola</figcaption>
-                                    <div class="number-drink"><span>5</span></div>
-                                </figure>
-                            </li>
+                            <li> -->
+                            <!-- <li class="img-drink">
+                                <img src="./img/Violet_Cola.png" alt="" />
+                                <p class="name-drink">Violet_Cola</p>
+                                <div class="number-drink">5</div>
+                            </li> -->
+                            <!-- </li> -->
                         </ul>
                     </div>
-                    <div class="total_price">총금액: <span id="total-price">9,000</span> 원</div>
+                    <div class="total_price">총금액 : <span id="total-price">9,000</span> 원</div>
                 </section>
             </div>
         </main>
 
-        <script src="./js/test.js"></script>
+        <script src="./js/app.js"></script>
     </body>
 </html>

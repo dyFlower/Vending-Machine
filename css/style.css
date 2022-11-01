@@ -72,7 +72,7 @@ body {
     display: grid;
     grid-template-rows: repeat(2, 1fr);
     grid-template-columns: repeat(3, 1fr);
-    gap: 9px;
+    gap: 12px;
 }
 .btn-drink {
     width: 94px;
@@ -80,16 +80,17 @@ body {
     border-radius: 10px;
     padding: 11px 11px 9px 13px;
     font-size: 9px;
-    border: 3px solid transparent;
     position: relative;
 }
 .btn-drink:hover {
     outline: 3px solid #6327fe;
 }
 .name-drink {
+    display: block;
     margin: 5px 0;
 }
 .btn-drink .txt-drink-price {
+    display: block;
     font-size: 12px;
     border-radius: 50px;
     background-color: #6327fe;
@@ -97,9 +98,6 @@ body {
     line-height: 22px;
 }
 
-.sell {
-    position: relative;
-}
 .sold-out::after {
     content: '품절';
     color: transparent;
@@ -107,12 +105,10 @@ body {
     width: 100%;
     height: 100%;
     right: 0;
+    top: 0;
     border-radius: 10px;
     opacity: 80%;
-    background-color: black;
-    background-image: url(../img/sold_out.png);
-    background-repeat: no-repeat;
-    background-position: center;
+    background: black url(../img/sold_out.png) no-repeat center;
 }
 
 /******************* charging section ********************/
@@ -121,7 +117,7 @@ body {
     height: 40%;
     display: grid;
     grid-template-rows: 1fr 1fr 3fr;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1fr 94px;
     gap: 12px;
 }
 /**************** 잔 액 박 스 *******************/
@@ -133,15 +129,17 @@ body {
     padding-left: 10px;
     position: relative;
 }
+
 .balance {
     position: absolute;
-    right: 30px;
+    right: 26px;
 }
-.balance::after {
+
+.return-money::after {
     content: '원';
     position: absolute;
     color: black;
-    left: 40px;
+    right: 10px;
 }
 
 .input-money {
@@ -228,7 +226,7 @@ body {
 }
 #my-money-value {
     position: absolute;
-    right: 60px;
+    right: 54px;
 }
 #my-money-value::after {
     content: ' 원';
@@ -250,7 +248,7 @@ h3 {
 }
 .list-get-drink {
     margin: 0 27px;
-    height: 340px;
+    height: 350px;
     background-color: #eae8fe;
     border-radius: 5px;
     overflow-y: scroll;
@@ -265,9 +263,10 @@ h3 {
     background-color: white;
     padding: 6px 10px;
     margin-bottom: 6px;
-    margin-right: 8px;
+    margin-right: 5px;
     display: flex;
     align-items: center;
+    border-radius: 5px;
 }
 .list-get-drink img {
     width: 18px;
@@ -278,8 +277,9 @@ h3 {
     background-color: white;
     text-align: right;
     line-height: 40px;
-    height: 65px;
-    padding-right: 27px;
+    height: 55px;
+    padding-right: 28px;
+    font-size: 12px;
 }
 /* ======================= 스크롤 바 ========================*/
 
@@ -313,10 +313,15 @@ h3 {
     .left-section {
         width: 100vw;
     }
-    .left-section {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    ul {
+        text-align: center;
+    }
+
+    .section-charging {
+        width: 100%;
+    }
+    .list-drink {
+        width: 100%;
     }
 
     .pocket {
@@ -324,4 +329,4 @@ h3 {
     }
 }
 
-/* 라벨을 설정하면 버튼인 부분 말고 라벨로 감싼 부분을 눌러도 선택이 된다...ㄴ */
+/* 라벨을 설정하면 버튼인 부분 말고 라벨로 감싼 부분을 눌러도 선택이 된다... */
